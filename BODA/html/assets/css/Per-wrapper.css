@@ -8,7 +8,7 @@
   flex-wrap: wrap;
 }
 .per-title img {
-  width: 250px;
+  width: 230px;
 }
 .title {
   padding: 10px;
@@ -60,10 +60,11 @@
   transition: height 0.3s, left 0.3s, box-shadow 0.3s;
   position: absolute;
   background-color: #eee;
+  border-radius: 10px;
 }
 
 .before-item {
-  left: -70%;
+  left: -98%;
   cursor: pointer;
 }
 
@@ -73,7 +74,7 @@
 }
 
 .after-item {
-  left: 70%;
+  left: 98%;
   cursor: pointer;
 }
 
