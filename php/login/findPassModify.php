@@ -1,6 +1,6 @@
 <?php
-include '../connect/connect.php';
-include '../connect/session.php';
+    include "../connect/connect.php";
+    include "../connect/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ include '../connect/session.php';
     <title>비밀번호 찾기 페이지</title>
     
     <!-- CSS -->
-    <?php include '../include/link.php'; ?>
+    <?php include "../include/link.php" ?>
 </head>
 
 <body>
@@ -22,8 +22,8 @@ include '../connect/session.php';
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
 
-    <?php include '../include/header.php'; ?>
-    <?php include '../login/login.php'; ?>
+    <?php include "../include/header.php" ?>
+    <?php include "../login/login.php" ?>
     <!-- //header -->
     
     <main id="infoType" class="info__wrap agree">
@@ -35,11 +35,12 @@ include '../connect/session.php';
                     <p>비밀번호가 성공적으로 변경되었습니다.<br>
                         새로운 비밀번호로 로그인해 주세요.</p>
 <?php
-$youPass = $_POST['youPass'];
-$youID = $_SESSION['youID'];
 
-$sql = "UPDATE myMember SET youPass = '$youPass' WHERE youID = '$youID'";
-$result = $connect->query($sql);
+    $youPass = $_POST['youPass'];
+    $youID = $_SESSION['youID'];
+
+    $sql = "UPDATE myMember SET youPass = '$youPass' WHERE youID = '$youID'";
+    $result = $connect -> query($sql);
 ?>
                     <a href="../main/main.php" class="btn1">메인으로</a>
                 </div>
@@ -47,9 +48,9 @@ $result = $connect->query($sql);
         </div>
     </main>
     <!-- //main -->
-    <?php include '../include/footer.php'; ?>
+    <?php include "../include/footer.php" ?>
     <!-- //footer -->
-    <?php include '../include/script.php'; ?>
+    <?php include "../include/script.php" ?>
 </body>
 
 </html>

@@ -6,10 +6,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>BODA 사이트 만들기</title>
-
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <?php include "../include/link.php" ?>
+    <title>BODA 사이트 만들기</title>
 </head>
 <body>
     <div id="skip">
@@ -22,9 +24,6 @@
     <!-- //header -->
     <div style="height: 500px"></div>
     메인!!
-<div class="ss">
-    반응형 왜 안되냐규,,
-</div>
 
 <?php include "../include/footer.php" ?>
 <!-- //footer -->

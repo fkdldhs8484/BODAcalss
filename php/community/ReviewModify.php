@@ -1,7 +1,7 @@
 <?php
-include '../connect/connect.php';
-include '../connect/session.php';
-include '../connect/sessionCheck.php';
+    include "../connect/connect.php";
+    include "../connect/session.php";
+    include "../connect/sessionCheck.php";
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ include '../connect/sessionCheck.php';
         <title>REVIEW WRITE</title>
 
         <!-- CSS -->
-        <?php include '../include/link.php'; ?>
+        <?php include "../include/link.php" ?>
     </head>
     <body>
         <div id="skip">
@@ -22,8 +22,8 @@ include '../connect/sessionCheck.php';
             <a href="#footer">푸터 영역 바로가기</a>
         </div>
 
-        <?php include '../include/header.php'; ?>
-        <?php include '../login/login.php'; ?>
+        <?php include "../include/header.php" ?>
+        <?php include "../login/login.php" ?>
         <!-- //header -->
 
         <main id="main">
@@ -65,25 +65,19 @@ include '../connect/sessionCheck.php';
                                 <div class="writeBox">
                                     <div>
 <?php
-$myReviewID = $_GET['myReviewID'];
+    $myReviewID = $_GET['myReviewID'];
 
-$sql = "SELECT myReviewID, ReviewTitle, ReviewContents FROM myReview WHERE myReviewID = {$myReviewID}";
-$result = $connect->query($sql);
+    $sql = "SELECT myReviewID, ReviewTitle, ReviewContents FROM myReview WHERE myReviewID = {$myReviewID}";
+    $result = $connect -> query($sql);
 
-if ($result) {
-    $info = $result->fetch_array(MYSQLI_ASSOC);
+    if($result){
+        $info = $result -> fetch_array(MYSQLI_ASSOC);
 
-    echo "<div style='display:none'><label for='myReviewID'>번호</label><input type='text' name='myReviewID' id='myReviewID' value='" .
-        $info['myReviewID'] .
-        "'/></div>";
-    echo "<label class='blind' for='ReviewTitle'>제목</label><input type='text' name='ReviewTitle' id='ReviewTitle' class='Title' value='" .
-        $info['ReviewTitle'] .
-        "'></div><div>";
-    echo "<label class='blind' for='ReviewContents'>내용</label><textarea name='ReviewContents' id='ReviewContents' class='Contents' rows='20'>" .
-        $info['ReviewContents'] .
-        '</textarea></div><div>';
-    // echo "<label for='youPass'>비밀번호</label><input type='password' name='youPass' id='youPass'placeholder='로그인 비밀번호를 입력해 주세요.' autocomplete='off' required></input></div></div>";
-}
+        echo "<div style='display:none'><label for='myReviewID'>번호</label><input type='text' name='myReviewID' id='myReviewID' value='".$info['myReviewID']."'/></div>";
+        echo "<label class='blind' for='ReviewTitle'>제목</label><input type='text' name='ReviewTitle' id='ReviewTitle' class='Title' value='".$info['ReviewTitle']."'></div><div>";
+        echo "<label class='blind' for='ReviewContents'>내용</label><textarea name='ReviewContents' id='ReviewContents' class='Contents' rows='20'>".$info['ReviewContents']."</textarea></div><div>";
+        // echo "<label for='youPass'>비밀번호</label><input type='password' name='youPass' id='youPass'placeholder='로그인 비밀번호를 입력해 주세요.' autocomplete='off' required></input></div></div>";
+    }
 ?>
                                 </div>
                             </div>
@@ -97,9 +91,9 @@ if ($result) {
             </section>
         </main>
         
-        <?php include '../include/footer.php'; ?>
+        <?php include "../include/footer.php" ?>
         <!-- //footer -->
 
-        <?php include '../include/script.php'; ?>
+        <?php include "../include/script.php" ?>
     </body>
 </html>

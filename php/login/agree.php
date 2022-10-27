@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <?php include '../include/link.php'; ?>
+    <?php include "../include/link.php" ?>
     <title>약관동의 페이지</title>
 </head>
 
 <body>
-    <?php include '../include/header.php'; ?>
-    <?php include '../login/login.php'; ?>
+    <?php include "../include/header.php" ?>
+    <?php include "../login/login.php" ?>
     <!-- //header -->
 
     <section id="AgreeType" class="Agree__wrap agree">
@@ -69,7 +69,7 @@
                     </div>
 
                 </article>
-                <div class="checkbox1 Agree">
+                <div class="checkbox1">
                     <input type='checkbox' id="check3" name='check_all'><label for="check3"></label>
                     <p class="checkbox_p">[필수] 만 14세 이상입니다.</p>
                 </div>
@@ -80,17 +80,19 @@
                 </div>
                 <div class="btn_box">
                     <a href="#" class="Btn">메인으로</a>
-                    <button type="button" class="next_button" onclick="newPage()" disabled="disabled">확인</button>
+                    <a href="agreeInfo.php" class="Btn">다음</a>
                 </div>
             </form>
         </div>
     </section>
     <!-- //section -->
 
-    <?php include '../include/footer.php'; ?>
+    <?php include "../include/footer.php" ?>
     <!-- //footer -->
 
-    <?php include '../include/script.php'; ?>
+    <script src="../../html/assets/js/headermenu.js"></script>
+    <script src="../../html/assets/js/loginpopup.js"></script>
+    <script src="../../html/assets/js/agree.js"></script>
     <!-- //script -->
 </body>
 

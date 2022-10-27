@@ -1,6 +1,6 @@
 <?php
-include '../connect/connect.php';
-include '../connect/session.php';
+    include "../connect/connect.php";
+    include "../connect/session.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include '../connect/session.php';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- CSS -->
-        <?php include '../include/link.php'; ?>
+        <?php include "../include/link.php" ?>
         <title>REVIEW</title>
     </head>
     <body>
@@ -19,8 +19,8 @@ include '../connect/session.php';
             <a href="#main">콘텐츠 영역 바로가기</a>
             <a href="#footer">푸터 영역 바로가기</a>
         </div>
-        <?php include '../include/header.php'; ?>
-        <?php include '../login/login.php'; ?>
+        <?php include "../include/header.php" ?>
+        <?php include "../login/login.php" ?>
         <!-- //header -->
 
         <main id="main">
@@ -29,10 +29,8 @@ include '../connect/session.php';
                 <h2>TODAY's</h2>
                 <h2>Review</h2>
                 <div class="home">
-                    <a class="home_iconBox" href="../main/main.php">
-                        <span class="home_icon"></span>
-                    </a>
-                    <span>Review</span>
+                    <a href="../main/main.php"><span class="home_icon"></span></a>
+                    <span>REVIEW</span>
                 </div>
                 <div class="menu">
                     <li><a href="Review.php" class="active">REVIEW</a></li>
@@ -43,35 +41,29 @@ include '../connect/session.php';
             <section class="cardType">
                 <div class="card__container">
 <?php
-$ReviewBestSql =
-    'SELECT r.myReviewID, r.ReviewTitle, m.youNickName, r.ReviewImgFile, r.ReviewregTime, r.ReviewView FROM myReview r JOIN myMember m ON(r.myMemberID = m.myMemberID) ORDER BY ReviewView DESC LIMIT 3';
-$ReviewBestResult = $connect->query($ReviewBestSql);
+    $ReviewBestSql = "SELECT r.myReviewID, r.ReviewTitle, m.youNickName, r.ReviewImgFile, r.ReviewregTime, r.ReviewView FROM myReview r JOIN myMember m ON(r.myMemberID = m.myMemberID) ORDER BY ReviewView DESC LIMIT 3";
+    $ReviewBestResult = $connect -> query($ReviewBestSql);
 
-foreach ($ReviewBestResult as $ReviewBestSql) { ?>
+    forEach($ReviewBestResult as $ReviewBestSql){ ?>
         <div class="card">
             <figure class="cardImgBox">
-                <img src="../assets/img/Review/<?= $ReviewBestSql[
-                    'ReviewImgFile'
-                ] ?>">
+                <img src="../assets/img/Review/<?=$ReviewBestSql['ReviewImgFile']?>">
             </figure>
             <div class="card__desc">
-                <h3><a href="ReviewView.php?myReviewID=<?= $ReviewBestSql[
-                    'myReviewID'
-                ] ?>"><?= $ReviewBestSql['ReviewTitle'] ?></a></h3>
+                <h3><a href="ReviewView.php?myReviewID=<?=$ReviewBestSql['myReviewID']?>"><?=$ReviewBestSql['ReviewTitle']?></a></h3>
                 <div class="icon">
-                    <p><?= $ReviewBestSql['youNickName'] ?></p>
+                    <p><?=$ReviewBestSql['youNickName']?></p>
                     <div class="views">
                         <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z" fill="#323232" />
                         </svg>
-                        <span><?= $ReviewBestSql['ReviewView'] ?></span>
+                        <span><?=$ReviewBestSql['ReviewView']?></span>
                         <span class="ir">조회수</span>
                     </div>
                 </div>
             </div>
         </div>
-<?php }
-?>
+<?php } ?>
                     <!-- <div class="card">
                         <figure>
                             <img src="../../html/assets/img/review_card_bg03.jpg" alt="review03" />
@@ -96,31 +88,21 @@ foreach ($ReviewBestResult as $ReviewBestSql) { ?>
             <section class="cardType mobile">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <?php foreach ($ReviewBestResult as $ReviewBestSql) { ?>
+                        <?php forEach($ReviewBestResult as $ReviewBestSql){ ?>
                             <div class="swiper-slide">
                                 <div class="card">
                                     <figure>
-                                        <img src="../assets/img/Review/<?= $ReviewBestSql[
-                                            'ReviewImgFile'
-                                        ] ?>" alt="review01" />
+                                        <img src="../assets/img/Review/<?=$ReviewBestSql['ReviewImgFile']?>" alt="review01" />
                                     </figure>
                                     <div class="card__desc">
-                                        <h3><a href="ReviewView.php?myReviewID=<?= $ReviewBestSql[
-                                            'myReviewID'
-                                        ] ?>"><?= $ReviewBestSql[
-    'ReviewTitle'
-] ?></a></h3>
+                                        <h3><a href="ReviewView.php?myReviewID=<?=$ReviewBestSql['myReviewID']?>"><?=$ReviewBestSql['ReviewTitle']?></a></h3>
                                         <div class="icon">
-                                            <p><?= $ReviewBestSql[
-                                                'youNickName'
-                                            ] ?></p>
+                                            <p><?=$ReviewBestSql['youNickName']?></p>
                                             <div class="views">
                                                 <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M11 0C6 0 1.73 3.11 0 7.5C1.73 11.89 6 15 11 15C16 15 20.27 11.89 22 7.5C20.27 3.11 16 0 11 0ZM11 12.5C8.24 12.5 6 10.26 6 7.5C6 4.74 8.24 2.5 11 2.5C13.76 2.5 16 4.74 16 7.5C16 10.26 13.76 12.5 11 12.5ZM11 4.5C9.34 4.5 8 5.84 8 7.5C8 9.16 9.34 10.5 11 10.5C12.66 10.5 14 9.16 14 7.5C14 5.84 12.66 4.5 11 4.5Z" fill="#323232" />
                                                 </svg>
-                                                <span><?= $ReviewBestSql[
-                                                    'ReviewView'
-                                                ] ?></span>
+                                                <span><?=$ReviewBestSql['ReviewView']?></span>
                                                 <span class="ir">조회수</span>
                                             </div>
                                         </div>
@@ -200,10 +182,10 @@ foreach ($ReviewBestResult as $ReviewBestSql) { ?>
                         <p class="board__total">
                             총 <em>
 <?php
-$sql = 'SELECT myReviewID FROM myReview';
-$result = $connect->query($sql);
-$count = $result->num_rows;
-echo $count;
+    $sql = "SELECT myReviewID FROM myReview";
+    $result = $connect -> query($sql);
+    $count = $result -> num_rows;
+    echo $count;
 ?>
                             </em>건
                         </p>
@@ -228,42 +210,38 @@ echo $count;
                             </thead>
                             <tbody>
 <?php
-if (isset($_GET['page'])) {
-    $page = (int) $_GET['page'];
-} else {
-    $page = 1;
-}
-
-$viewNum = 10;
-$viewLimit = $viewNum * $page - $viewNum;
-
-// 두 개의 테이블 join
-$sql = "SELECT r.myReviewID, r.ReviewTitle, m.youNickName, r.ReviewregTime, r.ReviewLike, r.ReviewView FROM myReview r JOIN myMember m ON(r.myMemberID = m.myMemberID) ORDER BY myReviewID DESC LIMIT ${viewLimit}, ${viewNum}";
-$result = $connect->query($sql);
-
-if ($result) {
-    $count = $result->num_rows;
-
-    if ($count > 0) {
-        for ($i = 1; $i <= $count; $i++) {
-            $info = $result->fetch_array(MYSQLI_ASSOC);
-            echo '<tr>';
-            echo '<td>' . $info['myReviewID'] . '</td>';
-            echo "<td><a href='ReviewView.php?myReviewID={$info['myReviewID']}'>" .
-                $info['ReviewTitle'] .
-                '</a></td>';
-            echo '<td>' . $info['youNickName'] . '</td>';
-            echo "<td class='mobile__table'>" .
-                date('Y-m-d', $info['ReviewregTime']) .
-                '</td>';
-            // echo "<td>".$info['ReviewLike']."</td>";
-            echo '<td>' . $info['ReviewView'] . '</td>';
-            echo '</tr>';
-        }
+    if(isset($_GET['page'])){
+        $page = (int)$_GET['page'];
     } else {
-        echo "<tr><td colspan='5'>게시글이 없습니다.</td></tr>";
+        $page = 1;
+    } 
+
+    $viewNum = 10;
+    $viewLimit = ($viewNum * $page) - $viewNum;
+
+    // 두 개의 테이블 join
+    $sql = "SELECT r.myReviewID, r.ReviewTitle, m.youNickName, r.ReviewregTime, r.ReviewLike, r.ReviewView FROM myReview r JOIN myMember m ON(r.myMemberID = m.myMemberID) ORDER BY myReviewID DESC LIMIT ${viewLimit}, ${viewNum}";
+    $result = $connect -> query($sql);
+
+    if($result){
+        $count = $result -> num_rows;
+
+        if($count > 0){
+            for($i=1; $i <= $count; $i++){
+                $info = $result -> fetch_array(MYSQLI_ASSOC);
+                echo "<tr>";
+                echo "<td>".$info['myReviewID']."</td>";
+                echo "<td><a href='ReviewView.php?myReviewID={$info['myReviewID']}'>".$info['ReviewTitle']."</a></td>";
+                echo "<td>".$info['youNickName']."</td>";
+                echo "<td class='mobile__table'>".date('Y-m-d', $info['ReviewregTime'])."</td>";
+                // echo "<td>".$info['ReviewLike']."</td>";
+                echo "<td>".$info['ReviewView']."</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='5'>게시글이 없습니다.</td></tr>";
+        }
     }
-}
 ?>
 
                                 <!-- <tr>
@@ -284,60 +262,54 @@ if ($result) {
                 <div class="board__pages">
                     <ul>
 <?php
-$sql = 'SELECT count(myReviewID) FROM myReview';
-$result = $connect->query($sql);
+    $sql = "SELECT count(myReviewID) FROM myReview";
+    $result = $connect -> query($sql);
 
-$ReviewCount = $result->fetch_array(MYSQLI_ASSOC);
-$ReviewCount = $ReviewCount['count(myReviewID)'];
+    $ReviewCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $ReviewCount = $ReviewCount['count(myReviewID)'];
 
-$ReviewCount = ceil($ReviewCount / $viewNum);
+    $ReviewCount = ceil($ReviewCount / $viewNum);
 
-$pageCurrent = 5;
-$startPage = $page - $pageCurrent;
-$endPage = $page + $pageCurrent;
+    $pageCurrent = 5;
+    $startPage = $page - $pageCurrent;
+    $endPage = $page + $pageCurrent;
 
-// 처음 페이지 초기화
-if ($startPage < 1) {
-    $startPage = 1;
-}
+    // 처음 페이지 초기화
+    if($startPage < 1) $startPage = 1;
 
-// 마지막 페이지 초기화
-if ($endPage >= $ReviewCount) {
-    $endPage = $ReviewCount;
-}
+    // 마지막 페이지 초기화
+    if($endPage >= $ReviewCount) $endPage = $ReviewCount;
 
-// 이전 페이지, 처음 페이지 이동
-if ($page != 1) {
-    $prevPage = $page - 1;
-    echo "<li><a href='Review.php?page=1'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    // 이전 페이지, 처음 페이지 이동
+    if($page != 1){
+        $prevPage = $page - 1;
+        echo "<li><a href='Review.php?page=1'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M17.2498 18L11.2498 12L17.2498 6' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         <path d='M11.25 18L5.25 12L11.25 6' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
-    echo "<li><a href='Review.php?page={$prevPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        echo "<li><a href='Review.php?page={$prevPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M14.25 6L8.25 12L14.25 18' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
-}
-
-// 페이지 넘버 표시
-for ($i = $startPage; $i <= $endPage; $i++) {
-    $active = '';
-    if ($i == $page) {
-        $active = 'active';
     }
-    echo "<li ><a class='{$active}' href='Review.php?page={$i}'>{$i}</a></li>";
-}
-
-// 다음 페이지, 마지막 페이지 이동
-if ($page != $endPage) {
-    $nextPage = $page + 1;
-    echo "<li><a href='Review.php?page={$nextPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    
+    // 페이지 넘버 표시
+    for($i=$startPage; $i<=$endPage; $i++){
+        $active = "";
+        if($i == $page) $active = "active";
+        echo "<li ><a class='{$active}' href='Review.php?page={$i}'>{$i}</a></li>";
+    }
+    
+    // 다음 페이지, 마지막 페이지 이동
+    if($page != $endPage){
+        $nextPage = $page + 1;
+        echo "<li><a href='Review.php?page={$nextPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M9 18L15 12L9 6' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
-    echo "<li><a href='Review.php?page={$ReviewCount}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        echo "<li><a href='Review.php?page={$ReviewCount}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M6.75024 6L12.7502 12L6.75024 18' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         <path d='M12.75 6L18.75 12L12.75 18' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
-}
+    }
 ?>
                         <!-- <li><a href="#">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -369,9 +341,9 @@ if ($page != $endPage) {
             <div class="topBtn ir">top</div>
         </main>
 
-        <?php include '../include/footer.php'; ?>
+        <?php include "../include/footer.php" ?>
         <!-- //footer -->
 
-        <?php include '../include/script.php'; ?>
+        <?php include "../include/script.php" ?>
     </body>
 </html>

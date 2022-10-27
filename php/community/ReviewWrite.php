@@ -1,7 +1,7 @@
 <?php
-include '../connect/connect.php';
-include '../connect/session.php';
-include '../connect/sessionCheck.php';
+    include "../connect/connect.php";
+    include "../connect/session.php";
+    include "../connect/sessionCheck.php";
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ include '../connect/sessionCheck.php';
         <title>REVIEW WRITE</title>
 
         <!-- CSS -->
-        <?php include '../include/link.php'; ?>
+        <?php include "../include/link.php" ?>
     </head>
     <body>
         <div id="skip">
@@ -22,8 +22,8 @@ include '../connect/sessionCheck.php';
             <a href="#footer">푸터 영역 바로가기</a>
         </div>
 
-        <?php include '../include/header.php'; ?>
-        <?php include '../login/login.php'; ?>
+        <?php include "../include/header.php" ?>
+        <?php include "../login/login.php" ?>
         <!-- //header -->
 
         <main id="main">
@@ -32,11 +32,10 @@ include '../connect/sessionCheck.php';
                     <h2>TODAY's</h2>
                     <h2>Review</h2>
                     <div class="home">
-                        <a class="home_iconBox" href="../main/main.php">
-                            <span class="home_icon"></span>
-                        </a>
-                        <span>Review</span>
-                    </div>
+                    <div class="home">
+                    <a href="../main/main.php"><span class="home_icon"></span></a>
+                    <span>REVIEW</span>
+                </div></div>
                     <div class="menu">
                         <li><a href="Review.php" class="active">REVIEW</a></li>
                         <li><a href="Talk.php">Talk</a></li>
@@ -84,9 +83,9 @@ include '../connect/sessionCheck.php';
             </section>
         </main>
         
-        <?php include '../include/footer.php'; ?>
+        <?php include "../include/footer.php" ?>
         <!-- //footer -->
 
-        <?php include '../include/script.php'; ?>
+        <?php include "../include/script.php" ?>
     </body>
 </html>

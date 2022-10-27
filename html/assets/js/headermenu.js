@@ -3,16 +3,16 @@ const header = document.querySelector(".header__menu");
 const submenu = document.querySelectorAll(".header__menu ul li .sub");
 
 header.addEventListener("mouseover", () => {
-    submenu.forEach((el) => {
-        el.classList.remove("blind");
-        el.style.transform = "translateY(0px)";
-    });
+  submenu.forEach((el) => {
+    el.classList.remove("blind");
+    el.style.transform = "translateY(0px)";
+  });
 });
 header.addEventListener("mouseout", () => {
-    submenu.forEach((el) => {
-        el.classList.add("blind");
-        el.style.transform = "translateY(-30px)";
-    });
+  submenu.forEach((el) => {
+    el.classList.add("blind");
+    el.style.transform = "translateY(-30px)";
+  });
 });
 
 // smallmenu
@@ -21,17 +21,17 @@ const menuBtnClose = document.querySelector(".header__right .ham__close");
 const smallmenu = document.querySelector(".smallmenu");
 
 menuBtn.addEventListener("click", () => {
-    smallmenu.classList.remove("blind");
-    menuBtnClose.classList.remove("blind");
-    menuBtn.classList.add("blind");
-    smallmenu.style.transform = "translateY(0px)";
+  smallmenu.classList.remove("blind");
+  menuBtnClose.classList.remove("blind");
+  menuBtn.classList.add("blind");
+  smallmenu.style.transform = "translateY(0px)";
 });
 
 menuBtnClose.addEventListener("click", () => {
-    smallmenu.classList.add("blind");
-    menuBtnClose.classList.add("blind");
-    menuBtn.classList.remove("blind");
-    smallmenu.style.transform = "translateY(-30px)";
+  smallmenu.classList.add("blind");
+  menuBtnClose.classList.add("blind");
+  menuBtn.classList.remove("blind");
+  smallmenu.style.transform = "translateY(-30px)";
 });
 
 // media ham
@@ -40,18 +40,14 @@ const MBHamClose = document.querySelector(".ham__mobile__close");
 const MBmenu = document.querySelector(".mobilemenu");
 const headerArea = document.querySelector(".header__area");
 MBHam.addEventListener("click", () => {
-    MBHam.classList.add("blind");
-    MBHamClose.classList.remove("blind");
-    MBmenu.classList.add("overlay");
-    headerArea.classList.add("overlay");
+  MBHam.classList.add("blind");
+  MBHamClose.classList.remove("blind");
+  MBmenu.classList.add("overlay");
+  headerArea.classList.add("overlay");
 });
 MBHamClose.addEventListener("click", () => {
-    MBHam.classList.remove("blind");
-    MBHamClose.classList.add("blind");
-    MBmenu.classList.remove("overlay");
-    headerArea.classList.remove("overlay");
+  MBHam.classList.remove("blind");
+  MBHamClose.classList.add("blind");
+  MBmenu.classList.remove("overlay");
+  headerArea.classList.remove("overlay");
 });
-
-//search
-// const searchBtn = document.querySelector(".header__right .search");
-// let i = 0;

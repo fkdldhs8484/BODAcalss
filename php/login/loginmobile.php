@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <?php include '../include/link.php'; ?>
+    <?php include "../include/link.php" ?>
     <title>로그인 페이지</title>
 </head>
 
 <body>
-    <?php include '../include/header.php'; ?>
+    <?php include "../include/header.php" ?>
     <!-- //header -->
     <div id="loginPage" class="loginPage">
         <main id="loginMain" class="popupMobile">
             <div class="login__header">
                 <h2 class="popup__title">LOGIN</h2>
-                <button type="button" class="popup__close"><span class="blind">닫기</span></button>
+                <!-- <button type="button" class="popup__close"><span class="blind">닫기</span></button> -->
             </div>
             <div class="login__inner">
                 <form action="loginmobileSave.php" name="login" class="loginForm" method="post">
@@ -44,7 +44,7 @@
             </div>
         </main>
     </div>
-    <?php include '../include/footer.php'; ?>
-    <?php include '../include/script.php'; ?>
+    <?php include "../include/footer.php" ?>
+    <?php include "../include/script.php" ?>
 </body>
 </html>

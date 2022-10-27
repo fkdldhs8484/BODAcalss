@@ -1,10 +1,9 @@
 <?php
-include '../connect/connect.php';
-include '../connect/session.php';
-if (isset($_SESSION['myMemberID'])) {
-    echo "<script>alert('잘못된 접근입니다.'); history.back();</script>";
-} else {
-     ?>
+    include "../connect/connect.php";
+    include "../connect/session.php";
+    if(isset($_SESSION['myMemberID'])){
+        echo "<script>alert('잘못된 접근입니다.'); history.back();</script>";
+    } else { ?>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -15,7 +14,7 @@ if (isset($_SESSION['myMemberID'])) {
     <title>비밀번호 찾기 페이지</title>
     
     <!-- CSS -->
-    <?php include '../include/link.php'; ?>
+    <?php include "../include/link.php" ?>
 </head>
 
 <body>
@@ -25,8 +24,8 @@ if (isset($_SESSION['myMemberID'])) {
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
 
-    <?php include '../include/header.php'; ?>
-    <?php include '../login/login.php'; ?>
+    <?php include "../include/header.php" ?>
+    <?php include "../login/login.php" ?>
     <!-- //header -->
     
     <main id="infoType" class="info__wrap agree">
@@ -35,25 +34,23 @@ if (isset($_SESSION['myMemberID'])) {
                 <div class="bg"></div>
                 <div class="modalBox">
                     <h2>계정 찾기</h2>
-<?php
-$youName = $_POST['youName'];
-$youID = $_POST['youID'];
-$youEmail = $_POST['youEmail'];
-$youPhone = $_POST['youPhone'];
+<?php    
+    $youName = $_POST['youName'];
+    $youID = $_POST['youID'];
+    $youEmail = $_POST['youEmail'];
+    $youPhone = $_POST['youPhone'];
 
-$sql = "SELECT myMemberID, youID, youName, youEmail, youPhone, youPass FROM myMember WHERE (youName = '$youName' AND youID = '$youID' AND youEmail = '$youEmail') OR (youName = '$youName' AND youID = '$youID' AND youPhone = '$youPhone')";
-$result = $connect->query($sql);
+    $sql = "SELECT myMemberID, youID, youName, youEmail, youPhone, youPass FROM myMember WHERE (youName = '$youName' AND youID = '$youID' AND youEmail = '$youEmail') OR (youName = '$youName' AND youID = '$youID' AND youPhone = '$youPhone')";
+    $result = $connect -> query($sql);
 
-if ($result) {
-    $count = $result->num_rows;
-    if ($count == 0) {
-        echo '<p>등록된 회원 정보가 없습니다.</p>';
-    } else {
-
-        $info = $result->fetch_array(MYSQLI_ASSOC);
-        $_SESSION['youID'] = $youID;
-        echo '<p>새로운 비밀번호로 변경해 주세요.</p>';
-        ?>
+    if($result){
+        $count = $result -> num_rows;
+        if($count == 0){
+            echo ("<p>등록된 회원 정보가 없습니다.</p>");
+        } else {
+            $info = $result -> fetch_array(MYSQLI_ASSOC);
+            $_SESSION['youID'] = $youID;
+            echo ("<p>새로운 비밀번호로 변경해 주세요.</p>"); ?>
 
             <form name="findForm" action="findPassModify.php" class="findForm"  method="post" onclick="return joinChecks()">
                 <fieldset>
@@ -71,20 +68,19 @@ if ($result) {
                 </fieldset>
                 <button type="submit" class="find-btn openBtn">확인</button>
             </form>
-<?php
+<?php        }
+    } else {
+        echo("<p>에러발생02 - 관리자에게 문의하세요.</p>");
     }
-} else {
-    echo '<p>에러발생02 - 관리자에게 문의하세요.</p>';
-}
 ?>
                 </div>
             </div>
         </div>
     </main>
     <!-- //main -->
-    <?php include '../include/footer.php'; ?>
+    <?php include "../include/footer.php" ?>
     <!-- //footer -->
-    <?php include '../include/script.php'; ?>
+    <?php include "../include/script.php" ?>
     <script>
         function joinChecks(){
             // 비밀번호 유효성 검사
@@ -121,5 +117,4 @@ if ($result) {
 
 </html>
 
-<?php
-} ?>
+<?php } ?>

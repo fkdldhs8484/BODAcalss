@@ -1,14 +1,12 @@
 <?php
-include '../connect/connect.php';
-include '../connect/session.php';
-include '../connect/sessionCheck.php';
+    include "../connect/connect.php";
+    include "../connect/session.php";
+    include "../connect/sessionCheck.php";
 
-$myReviewID = $_GET['myReviewID'];
-$myReviewID = $connect->real_escape_string($myReviewID);
+    $commentID = $_GET['commentID'];
+    $commentID = $connect -> real_escape_string($commentID);
 
-$sql = "DELETE FROM myTalk WHERE myReviewID = {$myReviewID}";
-$connect->query($sql);
+    $sql = "DELETE FROM myTalk WHERE myTalkID = {$commentID}";
+    $result = $connect -> query($sql);
+    // echo json_encode(array("info" => $commentID));
 ?>
-<script>
-    location.href="Talk.php";
-</script>
