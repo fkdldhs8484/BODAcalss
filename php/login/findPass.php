@@ -1,6 +1,6 @@
 <?php
-    include "../connect/connect.php";
-    include "../connect/session.php";
+include '../connect/connect.php';
+include '../connect/session.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
     <title>비밀번호 찾기 페이지</title>
     
     <!-- CSS -->
-    <?php include "../include/link.php" ?>
+    <?php include '../include/link.php'; ?>
 </head>
 
 <body>
@@ -22,8 +22,8 @@
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
 
-    <?php include "../include/header.php" ?>
-    <?php include "../login/login.php" ?>
+    <?php include '../include/header.php'; ?>
+    <?php include '../login/login.php'; ?>
     <!-- //header -->
 
     <!-- main -->
@@ -69,9 +69,9 @@
         </div>
     </main>
     <!-- //main -->
-    <?php include "../include/footer.php" ?>
+    <?php include '../include/footer.php'; ?>
     <!-- //footer -->
-    <?php include "../include/script.php" ?>
+    <?php include '../include/script.php'; ?>
     <script>
         const findE = document.querySelector(".find__tebMenu .Email");
         const findP = document.querySelector(".find__tebMenu .Phone");

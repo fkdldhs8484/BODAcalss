@@ -1,9 +1,9 @@
 <?php
-    include "../connect/session.php";
+include '../connect/session.php';
 
-    unset($_SESSION['myMemberID']);
-    unset($_SESSION['youID']);
-    unset($_SESSION['youNickName']);
+unset($_SESSION['myMemberID']);
+unset($_SESSION['youID']);
+unset($_SESSION['youNickName']);
 ?>
 
 <script>

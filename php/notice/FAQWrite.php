@@ -1,7 +1,7 @@
 <?php
-    include "../connect/connect.php";
-    include "../connect/session.php";
-    include "../connect/sessionCheck.php";
+include '../connect/connect.php';
+include '../connect/session.php';
+include '../connect/sessionCheck.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
         <title>NOTICE WRITE</title>
 
         <!-- CSS -->
-        <?php include "../include/link.php" ?>
+        <?php include '../include/link.php'; ?>
     </head>
     <body>
         <div id="skip">
@@ -22,8 +22,8 @@
             <a href="#footer">푸터 영역 바로가기</a>
         </div>
 
-        <?php include "../include/header.php" ?>
-        <?php include "../login/login.php" ?>
+        <?php include '../include/header.php'; ?>
+        <?php include '../login/login.php'; ?>
         <!-- //header -->
 
         <main id="main">
@@ -31,12 +31,9 @@
         <div class="notice__header top__container">
             <h2>FAQ</h2>
             <div class="home">
-                <span>
-                    <a href="#">
-                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 17V11H12V17H17V9H20L10 0L0 9H3V17H8Z" fill="#323232"/></svg>
-                    </a>
-                </span>
+                <a class="home_iconBox" href="../main/main.php">
+                    <span class="home_icon"></span>
+                </a>
                 <span>FAQ</span>
             </div>
             <div class="menu">
@@ -155,9 +152,9 @@
             </section>
         </main>
         
-        <?php include "../include/footer.php" ?>
+        <?php include '../include/footer.php'; ?>
         <!-- //footer -->
 
-        <?php include "../include/script.php" ?>
+        <?php include '../include/script.php'; ?>
     </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
-    include "../connect/connect.php";
-    include "../connect/session.php";
-    include "../connect/sessionCheck.php";
+include '../connect/connect.php';
+include '../connect/session.php';
+include '../connect/sessionCheck.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,22 +15,22 @@
 <body>
     
 <?php
-    $myReviewID = $_POST['myReviewID'];
-    $ReviewTitle = $_POST['ReviewTitle'];
-    $ReviewContents = $_POST['ReviewContents'];
-    $youPass = $_POST['youPass'];
-    $myMemberID = $_SESSION['myMemberID'];
+$myReviewID = $_POST['myReviewID'];
+$ReviewTitle = $_POST['ReviewTitle'];
+$ReviewContents = $_POST['ReviewContents'];
+$youPass = $_POST['youPass'];
+$myMemberID = $_SESSION['myMemberID'];
 
-    $ReviewTitle = $connect -> real_escape_string($ReviewTitle);
-    $ReviewContents = $connect -> real_escape_string($ReviewContents);
+$ReviewTitle = $connect->real_escape_string($ReviewTitle);
+$ReviewContents = $connect->real_escape_string($ReviewContents);
 
-    $sql = "SELECT youPass, myMemberID FROM myMember WHERE myMemberID = {$myMemberID}";
-    $result = $connect -> query($sql);
+$sql = "SELECT youPass, myMemberID FROM myMember WHERE myMemberID = {$myMemberID}";
+$result = $connect->query($sql);
 
-    $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
+$memberInfo = $result->fetch_array(MYSQLI_ASSOC);
 
-    $sql = "UPDATE myReview SET ReviewTitle = '{$ReviewTitle}', ReviewContents = '{$ReviewContents}' WHERE myReviewID = '{$myReviewID}'";
-    $connect -> query($sql);
+$sql = "UPDATE myReview SET ReviewTitle = '{$ReviewTitle}', ReviewContents = '{$ReviewContents}' WHERE myReviewID = '{$myReviewID}'";
+$connect->query($sql);
 ?>
 <script>
     location.href = "Review.php";

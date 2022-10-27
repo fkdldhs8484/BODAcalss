@@ -39,10 +39,11 @@
                 <h2>TODAY's</h2>
                 <h2>Review</h2>
                 <div class="home">
-                <div class="home">
-                    <a href="../main/main.php"><span class="home_icon"></span></a>
-                    <span>REVIEW</span>
-                </div></div>
+                    <a class="home_iconBox" href="../main/main.php">
+                        <span class="home_icon"></span>
+                    </a>
+                    <span>Review</span>
+                </div>
                 <div class="menu">
                     <li><a href="Review.php" class="active">REVIEW</a></li>
                     <li><a href="Talk.php">Talk</a></li>
@@ -139,22 +140,23 @@
         </div>
     </div>
 <?php } ?>
-                        <div class="talk__modify__modal" style='display: none;'>
-                            <h2>Review 댓글 수정하기</h2>
-                            <label for="ReviewCommentModifyMsg">수정 내용</label>
-                            <input type="text" id="ReviewCommentModifyMsg" name="ReviewCommentModifyMsg" placeholder="수정 내용">
-                            <div class="TalkModifyBtn">
-                                <button id="ReviewCommentModifyCancel">취소</button>
-                                <button id="ReviewCommentModifyButton">수정</button>
+                        <!-- <div class="comment comment_2">
+                            <div class="profile">
                             </div>
-                        </div>
-                        <div class="talk__delete__modal" style="display: none;">
-                            <h2>Review 댓글 삭제하기</h2>
-                            <div class="TalkDeleteBtn">
-                                <button id="ReviewCommentDeleteCancel">취소</button>
-                                <button id="ReviewCommentDeleteButton">삭제</button>
+                            <div class="contents">
+                                <div class="contents__top">
+                                    <p class="name"><span class="ir">작성자</span><span>머릿고기</span></p>
+                                    <div class="dateBox">
+                                        <p class="date"><span class="ir">작성일</span><span>| 2022-09-18</span></p>
+                                        <a href="#" class="modify">| 수정</a>
+                                        <a href="#" class="remove">| 삭제</a>
+                                    </div>
+                                </div>
+                                <div class="contents__bottom">
+                                    <span>배고픈데 건드리지 마세요.</span>
+                                </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -199,85 +201,6 @@
                         }
                     });
                 }
-            });
-
-            let ReviewCommentID = "";
-
-            // 수정 클릭하면 모달창
-            $(".modify").click(function(e) {
-                e.preventDefault();
-                $(".talk__modify__modal").fadeIn(500);
-
-                ReviewCommentID = $(this).parent().parent().parent().parent().attr("id");
-            });
-            // 수정 클릭하고 취소
-            $("#ReviewCommentModifyCancel").click(function(e) {
-                e.preventDefault();
-                $(".talk__modify__modal").fadeOut(500);
-            });
-            // 수정 클릭하고 수정
-            $("#ReviewCommentModifyButton").click(function(e) {
-                e.preventDefault();
-                if($("#ReviewCommentModifyMsg").val() == ''){
-                    alert("수정 내용을 입력해 주세요.");
-                    $("#ReviewCommentModifyMsg").focus();
-                }
-                location.href = "ReviewCommentModify.php";
-
-                $.ajax({
-                    url: "ReviewCommentModify.php",
-                    method: "POST",
-                    dataType: "json",
-                    data: {
-                        "ReviewCommentModifyMsg": $("#ReviewCommentModifyMsg").val(),
-                        "ReviewCommentID": ReviewCommentID
-                    },
-                        success: function(data){
-                            console.log(data);
-                            location.reload();
-                        },
-                        error: function(request, status, error){
-                            console.log("request" + request);
-                            console.log("status" + request);
-                            console.log("error" + request);
-                        }
-                })
-            });
-
-            // 삭제 클릭하면 모달창
-            $(".remove").click(function(e) {
-                e.preventDefault();
-                $(".talk__delete__modal").fadeIn(500);
-
-                ReviewCommentID = $(this).parent().parent().parent().parent().attr("id");
-            });
-            // 삭제 클릭하고 취소
-            $("#ReviewCommentDeleteCancel").click(function(e) {
-                e.preventDefault();
-                $(".talk__delete__modal").fadeOut(500);
-            });
-            // 삭제 클릭하고 삭제
-            $("#ReviewCommentDeleteButton").click(function(e) {
-                e.preventDefault();
-                location.href = "ReviewCommentDelete.php";
-
-                $.ajax({
-                    url: "ReviewCommentDelete.php",
-                    method: "POST",
-                    dataType: "json",
-                    data: {
-                        "ReviewCommentID": ReviewCommentID
-                    },
-                    success: function(data){
-                        console.log(data);
-                        location.reload();
-                    },
-                    error: function(request, status, error){
-                        console.log("request" + request);
-                        console.log("status" + request);
-                        console.log("error" + request);
-                    }
-                })
             });
         </script>
     </body>

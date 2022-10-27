@@ -15,4 +15,5 @@
     $sql .= ")charset=utf8;";
 
     $connect -> query($sql);
+
 ?>

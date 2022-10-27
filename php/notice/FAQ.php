@@ -1,6 +1,6 @@
-<?php 
-    include "../connect/connect.php";
-    include "../connect/session.php";
+<?php
+include '../connect/connect.php';
+include '../connect/session.php';
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <?php include "../include/link.php" ?>
+    <?php include '../include/link.php'; ?>
 
     <title>FAQ</title>
 </head>
@@ -20,8 +20,8 @@
         <a href="#main">콘텐츠 영역 바로가기</a>
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
-<?php include "../include/header.php" ?>
-<?php include "../login/login.php" ?>
+<?php include '../include/header.php'; ?>
+<?php include '../login/login.php'; ?>
 <!-- //header -->
     
 <main id="main">
@@ -29,7 +29,9 @@
     <div class="notice__header top__container">
         <h2>FAQ</h2>
         <div class="home">
-            <a href="../main/main.php"><span class="home_icon"></span></a>
+            <a class="home_iconBox" href="../main/main.php">
+                <span class="home_icon"></span>
+            </a>
             <span>FAQ</span>
         </div>
         <div class="menu">
@@ -74,10 +76,10 @@
             <div class="notice__board">
                 <p class="board__total">총 <em>
 <?php
-    $sql = "SELECT myFAQID FROM myFAQ";
-    $result = $connect -> query($sql);
-    $count = $result -> num_rows;
-    echo $count;
+$sql = 'SELECT myFAQID FROM myFAQ';
+$result = $connect->query($sql);
+$count = $result->num_rows;
+echo $count;
 ?>
                 </em>건</p>
                 <table class="notice__table">
@@ -97,41 +99,41 @@
                     </thead>
                     <tbody>
 <?php
-    if(isset($_GET['page'])){
-        $page = (int)$_GET['page'];
-    } else {
-        $page = 1;
-    } 
-    
-    $viewNum = 10;
-    $viewLimit = ($viewNum * $page) - $viewNum;
-    
-    // 두 개의 테이블 join
-    $sql = "SELECT f.myFAQID, f.FAQTitle, f.FAQSubTitle, f.FAQImgFile, f.FAQContents, m.myMemberID, f.FAQregTime FROM myFAQ f JOIN myMember m ON(f.myMemberID = m.myMemberID) ORDER BY myFAQID DESC LIMIT ${viewLimit}, ${viewNum}";
-    $result = $connect -> query($sql);
-    
-    if($result){
-        $count = $result -> num_rows;
-    
-        if($count > 0){
-            for($i=1; $i <= $count; $i++){
-                $info = $result -> fetch_array(MYSQLI_ASSOC);
-                // 제목
-                echo "<tr>";
-                echo "<td>".$info['myFAQID']."</td>";
-                echo "<td>".$info['FAQTitle']."</td>";
-                echo "<td class='mobile__table'>".date('Y-m-d', $info['FAQregTime'])."</td>";
-                echo "<td><svg class='open' width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L8 8L15 1' stroke='#888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg><svg class='close blind' width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15 8L8 0.999999L1 8' stroke='#888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg></td>";
-                echo "</tr>";
-                // 내용
-                echo "<tr>";
-                echo "<td colspan='4' class='content blind'><img src=../assets/img/FAQ/".$info['FAQImgFile'].">".$info['FAQSubTitle'];
-                echo "<p class='box'>".$info['FAQContents']."</p></td></tr>";
-            }
-        } else {
-            echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
+if (isset($_GET['page'])) {
+    $page = (int) $_GET['page'];
+} else {
+    $page = 1;
+}
+$viewNum = 10;
+$viewLimit = $viewNum * $page - $viewNum; // 두 개의 테이블 join
+$sql = "SELECT f.myFAQID, f.FAQTitle, f.FAQSubTitle, f.FAQImgFile, f.FAQContents, m.myMemberID, f.FAQregTime FROM myFAQ f JOIN myMember m ON(f.myMemberID = m.myMemberID) ORDER BY myFAQID DESC LIMIT ${viewLimit}, ${viewNum}";
+$result = $connect->query($sql);
+if ($result) {
+    $count = $result->num_rows;
+    if ($count > 0) {
+        for ($i = 1; $i <= $count; $i++) {
+            $info = $result->fetch_array(MYSQLI_ASSOC);
+            // 제목
+            echo '<tr>';
+            echo '<td>' . $info['myFAQID'] . '</td>';
+            echo '<td>' . $info['FAQTitle'] . '</td>';
+            echo "<td class='mobile__table'>" .
+                date('Y-m-d', $info['FAQregTime']) .
+                '</td>';
+            echo "<td><svg class='open' width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L8 8L15 1' stroke='#888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg><svg class='close blind' width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M15 8L8 0.999999L1 8' stroke='#888888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg></td>";
+            echo '</tr>';
+            // 내용
+            echo '<tr>';
+            echo "<td colspan='4' class='content blind'><img src=../assets/img/FAQ/" .
+                $info['FAQImgFile'] .
+                '>' .
+                $info['FAQSubTitle'];
+            echo "<p class='box'>" . $info['FAQContents'] . '</p></td></tr>';
         }
+    } else {
+        echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
     }
+}
 ?>
                         <!-- <tr>
                             <td>9</td>
@@ -169,64 +171,56 @@
                 </table>
             </div>
             <div class="board__btn">
-<?php
-                if($_SESSION['myMemberID'] == 24){
-                    echo "<a href='FAQWrite.php'>글쓰기</a>";
-                }
-?>
+<?php if ($_SESSION['myMemberID'] == 24) {
+    echo "<a href='FAQWrite.php'>글쓰기</a>";
+} ?>
             </div>
         </div>
         <div class="board__pages">
             <ul>
 <?php
-    $sql = "SELECT count(myFAQID) FROM myFAQ";
-    $result = $connect -> query($sql);
-
-    $FAQCount = $result -> fetch_array(MYSQLI_ASSOC);
-    $FAQCount = $FAQCount['count(myFAQID)'];
-
-    $FAQCount = ceil($FAQCount / $viewNum);
-
-    $pageCurrent = 5;
-    $startPage = $page - $pageCurrent;
-    $endPage = $page + $pageCurrent;
-
-    // 처음 페이지 초기화
-    if($startPage < 1) $startPage = 1;
-
-    // 마지막 페이지 초기화
-    if($endPage >= $FAQCount) $endPage = $FAQCount;
-
-    // 이전 페이지, 처음 페이지 이동
-    if($page != 1){
-        $prevPage = $page - 1;
-        echo "<li><a href='FAQ.php?page=1'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+$sql = 'SELECT count(myFAQID) FROM myFAQ';
+$result = $connect->query($sql);
+$FAQCount = $result->fetch_array(MYSQLI_ASSOC);
+$FAQCount = $FAQCount['count(myFAQID)'];
+$FAQCount = ceil($FAQCount / $viewNum);
+$pageCurrent = 5;
+$startPage = $page - $pageCurrent;
+$endPage = $page + $pageCurrent; // 처음 페이지 초기화
+if ($startPage < 1) {
+    $startPage = 1;
+}
+// 마지막 페이지 초기화
+if ($endPage >= $FAQCount) {
+    $endPage = $FAQCount;
+} // 이전 페이지, 처음 페이지 이동
+if ($page != 1) {
+    $prevPage = $page - 1;
+    echo "<li><a href='FAQ.php?page=1'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M17.2498 18L11.2498 12L17.2498 6' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         <path d='M11.25 18L5.25 12L11.25 6' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
-        echo "<li><a href='FAQ.php?page={$prevPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    echo "<li><a href='FAQ.php?page={$prevPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M14.25 6L8.25 12L14.25 18' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
+} // 페이지 넘버 표시
+for ($i = $startPage; $i <= $endPage; $i++) {
+    $active = '';
+    if ($i == $page) {
+        $active = 'active';
     }
-    
-    // 페이지 넘버 표시
-    for($i=$startPage; $i<=$endPage; $i++){
-        $active = "";
-        if($i == $page) $active = "active";
-        echo "<li ><a class='{$active}' href='FAQ.php?page={$i}'>{$i}</a></li>";
-    }
-    
-    // 다음 페이지, 마지막 페이지 이동
-    if($page != $endPage){
-        $nextPage = $page + 1;
-        echo "<li><a href='FAQ.php?page={$nextPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    echo "<li ><a class='{$active}' href='FAQ.php?page={$i}'>{$i}</a></li>";
+} // 다음 페이지, 마지막 페이지 이동
+if ($page != $endPage) {
+    $nextPage = $page + 1;
+    echo "<li><a href='FAQ.php?page={$nextPage}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M9 18L15 12L9 6' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
-        echo "<li><a href='FAQ.php?page={$FAQCount}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    echo "<li><a href='FAQ.php?page={$FAQCount}'><svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M6.75024 6L12.7502 12L6.75024 18' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         <path d='M12.75 6L18.75 12L12.75 18' stroke='#323232' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
         </svg></a></li>";
-    }
+}
 ?>
             </ul>
         </div>
@@ -234,9 +228,9 @@
     <div class="topBtn ir">top</div>
 </main>
 
-<?php include "../include/footer.php" ?>
+<?php include '../include/footer.php'; ?>
 <!-- //footer -->
-<?php include "../include/script.php" ?>
+<?php include '../include/script.php'; ?>
 <!-- //login -->
 
 <script>
