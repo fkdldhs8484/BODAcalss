@@ -21,7 +21,7 @@
   justify-content: space-between;
 }
 .current__h {
-  width: 32%;
+  width: 36%;
   padding: 50px 20px;
 }
 .current {
@@ -34,7 +34,7 @@
   border-bottom: none;
 }
 .current figure {
-  width: 68%;
+  width: 60%;
 }
 .current img {
   width: 680px;
@@ -68,50 +68,7 @@
 
 /* 미디어쿼리 */
 @media (max-width: 820px) {
-  .current__table tbody tr td.content {
-    font-size: 15px;
-    padding: 7%;
-  }
 }
 
 @media (max-width: 480px) {
-  .current__header .home {
-    display: none;
-  }
-  .main__header .menu li:nth-child(1) a {
-    max-width: 120px;
-  }
-  .current__search {
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  .current__search .currentSearchBox {
-    margin-right: 0px;
-  }
-  .current__search .currentSearchBox #searchOption {
-    margin-right: 5px;
-  }
-  .current__board
-    .current__table
-    .current__board
-    .current__table
-    tbody
-    tr
-    td.content
-    .box {
-    padding: 10px;
-  }
-  .current__table tbody tr td {
-    font-size: 15px;
-  }
-  /* 모바일 테이블*/
-  .mobile__table {
-    display: none;
-  }
-  .current__table colgroup col:nth-child(2) {
-    width: 60% !important;
-  }
-  .current__table colgroup col:nth-child(4) {
-    width: 20% !important;
-  }
 }
