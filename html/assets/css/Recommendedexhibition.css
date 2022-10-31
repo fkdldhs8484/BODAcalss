@@ -1,0 +1,136 @@
+/* Recommendedexhibition */
+.Recommendedexhibition__header {
+  position: relative;
+}
+.Recommendedexhibition__header h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin-bottom: 80px;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 30px;
+}
+
+.Recommendedexhibition__header span {
+  font-size: 18px;
+  color: #b0b0b0;
+  font-weight: 300;
+}
+/* Recommendedexhibition__search */
+.Recommendedexhibition__inner {
+  justify-content: space-between;
+}
+.Recommendedexhibition__h {
+  width: 32%;
+  padding: 50px 20px;
+}
+.Recommendedexhibition {
+  display: flex;
+  align-items: center;
+  margin-bottom: 85px;
+  padding-bottom: 85px;
+  border-bottom: 1px solid #efefef;
+}
+.c1 {
+  border-bottom: none;
+}
+.Recommendedexhibition figure {
+  width: 68%;
+}
+.Recommendedexhibition img {
+  width: 680px;
+  height: 340px;
+  float: right;
+}
+.Recommendedexhibition__title {
+  font-size: 40px;
+  font-weight: 600;
+}
+.Recommendedexhibition__desc__one {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  display: flex;
+}
+.Recommendedexhibition__desc__two {
+  font-size: 18px;
+  font-weight: 400;
+  color: #b0b0b0;
+  margin-bottom: 31px;
+  display: flex;
+}
+.Recommendedexhibition__box {
+  background-color: #000;
+  width: 159px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 820px) {
+  .Recommendedexhibition__inner {
+    justify-content: space-between;
+  }
+  .Recommendedexhibition {
+    display: flex;
+  }
+  .Recommendedexhibition__h {
+    width: 40%;
+    display: block;
+  }
+  .Recommendedexhibition__title {
+    font-size: 40px;
+  }
+  .Recommendedexhibition__desc__two {
+    font-size: 15px;
+  }
+  .Recommendedexhibition figure {
+    width: 60%;
+    transition: all ease 2s;
+    box-sizing: border-box;
+  }
+  .Recommendedexhibition img {
+    width: 100%;
+    transition: all ease 0.8s;
+  }
+  .Recommendedexhibition__header .sp {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .Recommendedexhibition__inner {
+    margin: 0 auto;
+  }
+  .Recommendedexhibition {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .Recommendedexhibition__h {
+    width: 100%;
+  }
+  .Recommendedexhibition__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  .Recommendedexhibition__desc__one {
+    justify-content: center;
+  }
+  .Recommendedexhibition__desc__two {
+    display: flex;
+    justify-content: center;
+  }
+  .Recommendedexhibition__box {
+    display: inline-block;
+    justify-content: center;
+  }
+  .Recommendedexhibition figure {
+    width: 100%;
+  }
+  .board__pages {
+    margin-bottom: 70px;
+  }
+}
