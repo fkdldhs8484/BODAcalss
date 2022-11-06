@@ -1,0 +1,113 @@
+.MP__container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 180px auto 120px auto;
+}
+
+.MP__page__ch__container {
+    max-width: 1200px;
+    padding: 0 20px 900px 20px;
+    margin: 0 auto;
+}
+
+/* MP__left */
+.MP__page__ch__left {
+    width: 20%;
+    float: left;
+}
+
+.MP__title {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 13px;
+    border-bottom: 2px solid #000;
+}
+
+.MP__menu {
+    motion: 0;
+    padding: 0;
+}
+
+.MP__menu__main {
+    display: block;
+    padding: 30px 0;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.MP__menu__main__area {
+    /* margin-bottom: 71px; */
+}
+
+.MP__menu__main__sub {
+    display: block;
+    padding: 26px 0;
+    color: #999;
+    font-weight: 300;
+}
+
+/* MP__right */
+.MP__page__ch__right {
+    width: 67%;
+    float: right;
+}
+
+.current__home {
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    right: 0px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.MP__right__title {
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 13px;
+    border-bottom: 2px solid #000;
+}
+
+.MP__right__p {
+    padding: 40px 0;
+    font-size: 28px;
+    line-height: 56px;
+}
+
+.MP__right__title2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.MP__page__ch__pass__ch {
+    width: 67%;
+    height: 71px;
+    border-radius: 10px;
+    padding: 0 25px;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 260px;
+}
+
+.MP__page__ch__one {
+    border-top: 1px solid #ddd;
+}
+
+.MP__page__ch__area {
+    width: 100%;
+    margin-top: 57px;
+    align-items: center;
+    text-align: center;
+}
+
+.MP__page__ch__btn {
+    display: inline-block;
+    width: 273px;
+    height: 78px;
+    background: #000;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    cursor: pointer;
+}
