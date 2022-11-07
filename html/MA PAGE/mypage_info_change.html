@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/common.css" />
 
-    <link rel="stylesheet" href="../assets/css/mypage_info.css" />
+    <link rel="stylesheet" href="../assets/css/mypage_info_c.css" />
 
     <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/loginPopup.css" />
@@ -216,7 +216,7 @@
 
                             <div class="MP__menu__main__area">
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 개인정보 수정</a>
+                                    <a class="MP__menu__main__sub active" href="#">∙ 개인정보 수정</a>
                                 </li>
                                 <li>
                                     <a class="MP__menu__main__sub" href="#">∙ 탈퇴하기</a>
@@ -242,26 +242,48 @@
                     </div>
                 </article>
                 <article class="MP__page__ch__right ">
-                    <h3 class="MP__right__title">보안설정</h3>
+                    <h3 class="MP__if__right__title">개인정보수정</h3>
                     <div class="current__home">
                         <a class="current__home_iconBox" href="../main/main.html">
                             <span class="current__home_icon"></span>
                         </a>
-                        <span>TALK</span>
+                        <span>MY PAGE</span>
                     </div>
-                    <p class="MP__right__p">회원님의 개인정보를 소중하게 보호하려고 노력하고 있습니다.<br>
-                        비밀번호 확인 후 개인정보를 제공합니다!</p>
-                    <h4 class="MP__right__title2">비밀번호</h4>
-                    <input type="password" class="MP__page__ch__pass__ch" id="youPass" name="youPass"
-                        placeholder="비밀번호를 입력해 주세요." autocomplete="off" required>
-                    <p class="msg" id="youPassComment"></p>
-                    <div class="MP__page__ch__one">
-                        <div class="MP__page__ch__area">
-                            <button class="MP__page__ch__btn">확인</button>
+                    <div class="MP__if__ch__box">
+                        <h4 class="MP__if__ch__title__one">기본회원정보</h4>
+                        <div class="MP__if__ch__box__box">
+                            <div class="MP__if__ch__box__ch">
+                                <label for="youNickName">닉네임</label>
+                                <input type="text" id="youNickName" class="NickName" name="youNickName" placeholder="닉네임을 입력해 주세요." autocomplete="off" required>
+                                <a class="btn1 check" onclick="nickChecking()">중복확인</a>
+                                <p class="msg" id="youNickNameComment"></p>
+                            </div>
+                            <div class="MP__if__ch__box__ch">
+                                <label for="youPass">비밀번호</label>
+                                <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 입력해 주세요." autocomplete="off" required>
+                                <p class="msg" id="youPassComment"></p>
+                            </div>
+                            <div class="MP__if__ch__box__ch">
+                                <label for="youPassC">비밀번호 확인</label>
+                                <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 한 번 더 입력해주세요." autocomplete="off" required>
+                                <p class="msg" id="youPassCComment"></p>
+                            </div>
+                            <div class="MP__if__ch__box__ch">
+                                <label for="youEmail">이메일</label>
+                                <input type="email" id="youEmail" placeholder="이메일을 입력해 주세요." autocomplete="off" required>
+                                <p class="msg" id="youEmailComment"></p>
+                            </div>
                         </div>
-
                     </div>
-
+                    <h5 class="MP__if__ch__title__two">추가회원정보</h5>
+                    <div class="MP__if__ch__checkbox">
+                        <h6 class="MP__if__ch__title__gender">성별</h6>
+                        <p class="checkbox_p">남자</p>   
+                        <input type='checkbox' id="check1" name='check_all'><label for="check1"></label>
+                        <p class="checkbox_p">여자</p>   
+                        <input type='checkbox' id="check2" name='check_all'><label for="check2"></label>
+                    </div>
+                    <h5 class="MP__if__ch__title__two">마켓팅 수신 동의</h5>
                 </article>
 
             </div>
@@ -329,5 +351,7 @@
     <script src="../assets/js/agree.js"></script>
     <script src="../assets/js/headermenu.js"></script>
     <script src="../assets/js/loginpopup.js"></script>
+
+   
 
 </body>
