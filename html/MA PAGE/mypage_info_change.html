@@ -254,23 +254,27 @@
                         <div class="MP__if__ch__box__box">
                             <div class="MP__if__ch__box__ch">
                                 <label for="youNickName">닉네임</label>
-                                <input type="text" id="youNickName" class="NickName" name="youNickName" placeholder="닉네임을 입력해 주세요." autocomplete="off" required>
+                                <input type="text" id="youNickName" class="NickName" name="youNickName"
+                                    placeholder="닉네임을 입력해 주세요." autocomplete="off" required>
                                 <a class="btn1 check" onclick="nickChecking()">중복확인</a>
                                 <p class="msg" id="youNickNameComment"></p>
                             </div>
                             <div class="MP__if__ch__box__ch">
                                 <label for="youPass">비밀번호</label>
-                                <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 입력해 주세요." autocomplete="off" required>
+                                <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 입력해 주세요."
+                                    autocomplete="off" required>
                                 <p class="msg" id="youPassComment"></p>
                             </div>
                             <div class="MP__if__ch__box__ch">
                                 <label for="youPassC">비밀번호 확인</label>
-                                <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 한 번 더 입력해주세요." autocomplete="off" required>
+                                <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 한 번 더 입력해주세요."
+                                    autocomplete="off" required>
                                 <p class="msg" id="youPassCComment"></p>
                             </div>
                             <div class="MP__if__ch__box__ch">
                                 <label for="youEmail">이메일</label>
-                                <input type="email" id="youEmail" placeholder="이메일을 입력해 주세요." autocomplete="off" required>
+                                <input type="email" id="youEmail" placeholder="이메일을 입력해 주세요." autocomplete="off"
+                                    required>
                                 <p class="msg" id="youEmailComment"></p>
                             </div>
                         </div>
@@ -278,14 +282,36 @@
                     <h5 class="MP__if__ch__title__two">추가회원정보</h5>
                     <div class="MP__if__ch__checkbox">
                         <h6 class="MP__if__ch__title__gender">성별</h6>
-                        <p class="checkbox_p">남자</p>   
+                        <p class="checkbox_p">남자</p>
                         <input type='checkbox' id="check1" name='check_all'><label for="check1"></label>
-                        <p class="checkbox_p">여자</p>   
+                        <p class="checkbox_p">여자</p>
                         <input type='checkbox' id="check2" name='check_all'><label for="check2"></label>
                     </div>
                     <h5 class="MP__if__ch__title__two">마켓팅 수신 동의</h5>
                 </article>
 
+                <div class="MP__page__ch__btn">
+                    <li><a href="#">탈퇴하기</a></li>
+                </div>
+
+
+                <div id="MP__Popup" class="MP__popup open blind">
+                    <div class="MP__wrap">
+                        <div class="MP__header">
+                            <h2 class="MP__popup__title">탈퇴하시겠습니까?</h2>
+                            <p class="MP__popup__desc">정말로??😭😭😭</p>
+                        </div>
+                        <div class="MP__Popup__button">
+                            <div>
+                                <button class="MP__Popup__main">메인으로</button>
+                            </div>
+                            <div>
+                                <button class="MP__Popup__secession">탈퇴하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //my page main popup -->
             </div>
         </section>
     </main>
@@ -351,7 +377,8 @@
     <script src="../assets/js/agree.js"></script>
     <script src="../assets/js/headermenu.js"></script>
     <script src="../assets/js/loginpopup.js"></script>
+    <script src="../assets/js/MY_page_popup.js"></script>
 
-   
+
 
 </body>
