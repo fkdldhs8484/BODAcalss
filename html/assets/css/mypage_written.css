@@ -56,7 +56,7 @@
     float: right;
 }
 
-.current__home {
+.MP__page__w__current__home {
     position: relative;
     bottom: 30px;
     display: flex;
@@ -73,10 +73,10 @@
 }
 
 /* board */
-.contents__topBox {
+.MP__page__w__contents__topBox {
     display: flex;
 }
-.talk__table {
+.MP__page__w__talk__table {
     width: 100%;
     border-spacing: 0px;
     border-collapse: collapse;
@@ -84,12 +84,12 @@
     font-weight: 400;
     font-style: normal;
 }
-.comment {
-    /* border-bottom: 1px dashed #D0D0D0; */
+.MP__page__w__comment {
+    border-bottom: 1px dashed #efefef;
     box-sizing: border-box;
     padding: 21px 0;
 }
-.comment .profile {
+.MP__page__w__comment .profile {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -99,65 +99,65 @@
     margin-right: 15px;
     float: left;
 }
-.comment .contents {
+.MP__page__w__comment .contents {
     float: left;
     width: 90%;
 }
-.comment .contents .contents__top {
+.MP__page__w__comment .contents .MP__page__w__contents__top {
     display: flex;
     margin: 5px 0;
 }
-.comment .contents .contents__top .name {
+.MP__page__w__comment .contents .contents__top .name {
     font-weight: 500;
     font-size: 16px;
     color: #000;
 }
-.comment .contents .contents__top .date {
+.MP__page__w__comment .contents .contents__top .date {
     font-weight: 300;
     font-size: 16px;
     color: #b0b0b0;
     padding: 0 5px;
 }
-.comment .contents .contents__top .modify {
+.MP__page__w__comment .contents .contents__top .modify {
     font-weight: 300;
     font-size: 16px;
     color: #b0b0b0;
     padding: 0 5px 0 0;
 }
-.comment .contents .contents__top .remove {
+.MP__page__w__comment .contents .contents__top .remove {
     font-weight: 300;
     font-size: 16px;
     color: #b0b0b0;
 }
-.comment .contents .contents__bottom {
+.MP__page__w__comment .contents .MP__page__w__contents__bottom {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     color: #000;
 }
 .comment_1 .profile {
     background-image: url(../img/my_pa_img.jpg);
 }
 
-.comment .heart {
+.MP__page__w__comment .heart {
     float: right;
 }
-.comment .heart p {
+.MP__page__w__comment .heart p {
     font-weight: 300;
     font-size: 12px;
     text-align: center;
 }
-.talk__board .talk__table tbody tr {
+.MP__page__w__talk__board .MP__page__w__talk__table tbody tr {
     transition: all 0.3s ease-in-out;
 }
 
-.talk__board .talk__table tbody tr td:nth-child(2) {
+.MP__page__w__talk__board .MP__page__w__talk__table tbody tr td:nth-child(2) {
     text-align: left;
 }
-.talk__board .talk__table tbody tr td {
-    border-bottom: 1px dashed #e6e6e6;
+.MP__page__w__talk__board .MP__page__w__talk__table tbody tr td {
+    /* border-bottom: 1px dashed #e6e6e6; */
     font-size: 16px;
     color: #000;
 }
-.talk__board .talk__table tbody tr td a {
+.MP__page__w__talk__board .MP__page__w__talk__table tbody tr td a {
     color: #000;
 }
