@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/common.css" />
 
     <link rel="stylesheet" href="../assets/css/mypage_info_c.css" />
+    <link rel="stylesheet" href="../assets/css/MPPopup.css" />
 
     <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/loginPopup.css" />
@@ -189,7 +190,7 @@
 
 
     <main id="main">
-        <h2 class="blind">마이페이지 보안설정 게시판입니다.</h2>
+        <h2 class="blind">마이페이지 개인정보 수정 게시판입니다.</h2>
         <section class="MP__container">
             <div class="MP__page__ch__container">
                 <article class="MP__page__ch__left ">
@@ -197,29 +198,29 @@
                     <div class="MP__menu">
                         <ul>
                             <li>
-                                <a class="MP__menu__main" href="#">프로필 설정</a>
+                                <a class="MP__menu__main" href="../MA PAGE/mypage_main.html">프로필 설정</a>
                             </li>
                             <div class="MP__menu__main__area">
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 프로필 수정</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_main.html">∙ 프로필 수정</a>
                                 </li>
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 닉네임 변경</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_main.html">∙ 닉네임 변경</a>
                                 </li>
                             </div>
 
                         </ul>
                         <ul>
                             <li>
-                                <a class="MP__menu__main" href="../">보안 설정</a>
+                                <a class="MP__menu__main" href="../MA PAGE/mypage_info.html">보안 설정</a>
                             </li>
 
                             <div class="MP__menu__main__area">
                                 <li>
-                                    <a class="MP__menu__main__sub active" href="#">∙ 개인정보 수정</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_info.html">∙ 개인정보 수정</a>
                                 </li>
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 탈퇴하기</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_info.html">∙ 탈퇴하기</a>
                                 </li>
                             </div>
 
@@ -227,14 +228,14 @@
                         </ul>
                         <ul>
                             <li>
-                                <a class="MP__menu__main" href="../community/Review.html">REVIEW</a>
+                                <a class="MP__menu__main" href="../MA PAGE/mypage_written.html">REVIEW</a>
                             </li>
-                            <div class="MP__menu__main__area">
+                            <div class="MP__menu__main__area b_n">
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 리뷰 쓰기</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_written.html">∙ 리뷰 쓰기</a>
                                 </li>
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 내가 쓴 글</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_written.html">∙ 내가 쓴 글</a>
                                 </li>
                             </div>
 
@@ -252,8 +253,6 @@
                     <div class="MP__if__ch__box">
                         <h4 class="MP__if__ch__title__one">기본회원정보</h4>
                         <div class="MP__if__ch__box__box">
-                            <div class="MP__if__ch__box__ch">
-                            </div>
                             <div class="MP__if__ch__box__ch">
                                 <label for="youPass">비밀번호</label>
                                 <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 입력해 주세요."
@@ -275,12 +274,13 @@
                         </div>
                     </div>
                     <h5 class="MP__if__ch__title__two">추가회원정보</h5>
-                    <div class="MP__if__ch__checkbox">
-                        <h6 class="MP__if__ch__title__gender">성별</h6>
-                        <p class="checkbox_p">남자</p>
-                        <input type='checkbox' id="check1" name='check_all'><label for="check1"></label>
-                        <p class="checkbox_p">여자</p>
-                        <input type='checkbox' id="check2" name='check_all'><label for="check2"></label>
+                    <div class="MP__if__ch__job__box">
+                        <label for="job" class="jobbox">성별</label>
+                        <select name="job" id="job">
+                            <option value="">성별선택</option>
+                            <option value="남">남자</option>
+                            <option value="여">여자</option>
+                        </select>
                     </div>
                     <!-- 셀렉트로 변경 -->
                     <div class=""></div>
@@ -288,9 +288,18 @@
                     <div class="MP__page__ch__btn">
                         <a href="#">탈퇴하기</a>
                     </div>
+
+                    <div class="MP__page__if__area">
+                        <div class="MP__page__c__button__area">
+                            <button class="secondary">취소</button>
+                        </div>
+                        <div class="MP__page__c__button__area">
+                            <button class="primary">확인</button>
+                        </div>
+                    </div>
                 </article>
 
-               
+
 
 
                 <div id="MP__Popup" class="MP__popup open blind">

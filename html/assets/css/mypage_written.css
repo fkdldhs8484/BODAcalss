@@ -1,0 +1,163 @@
+.MP__container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 180px auto;
+}
+
+.MP__page__w__container {
+    max-width: 1200px;
+    padding: 0 20px 1206px 20px;
+    margin: 0 auto;
+}
+/* MP__left */
+.MP__page__w__left {
+    width: 10rem;
+    float: left;
+}
+
+.MP__title {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 13px;
+    border-bottom: 2px solid #000;
+}
+
+.MP__menu {
+    margin: 0;
+    padding: 0;
+}
+
+.MP__menu__main {
+    display: block;
+    padding: 30px 0;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.MP__menu__main__area {
+    border-bottom: 2px solid #000;
+}
+
+.MP__menu__main__area.b_n {
+    border-bottom: none;
+}
+
+.MP__menu__main__sub {
+    display: block;
+    padding: 26px 0;
+    color: #999;
+    font-weight: 300;
+}
+
+/* MP__right */
+.MP__page__w__right {
+    width: calc(100% - 13.625rem);
+    float: right;
+}
+
+.current__home {
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    right: 0px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.MP__if__right__title {
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 13px;
+    border-bottom: 2px solid #000;
+}
+
+/* board */
+.contents__topBox {
+    display: flex;
+}
+.talk__table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-family: "scoredream";
+    font-weight: 400;
+    font-style: normal;
+}
+.comment {
+    /* border-bottom: 1px dashed #D0D0D0; */
+    box-sizing: border-box;
+    padding: 21px 0;
+}
+.comment .profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 15px;
+    float: left;
+}
+.comment .contents {
+    float: left;
+    width: 90%;
+}
+.comment .contents .contents__top {
+    display: flex;
+    margin: 5px 0;
+}
+.comment .contents .contents__top .name {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+}
+.comment .contents .contents__top .date {
+    font-weight: 300;
+    font-size: 16px;
+    color: #b0b0b0;
+    padding: 0 5px;
+}
+.comment .contents .contents__top .modify {
+    font-weight: 300;
+    font-size: 16px;
+    color: #b0b0b0;
+    padding: 0 5px 0 0;
+}
+.comment .contents .contents__top .remove {
+    font-weight: 300;
+    font-size: 16px;
+    color: #b0b0b0;
+}
+.comment .contents .contents__bottom {
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;
+}
+.comment_1 .profile {
+    background-image: url(../img/my_pa_img.jpg);
+}
+
+.comment .heart {
+    float: right;
+}
+.comment .heart p {
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+}
+.talk__board .talk__table tbody tr {
+    transition: all 0.3s ease-in-out;
+}
+
+.talk__board .talk__table tbody tr td:nth-child(2) {
+    text-align: left;
+}
+.talk__board .talk__table tbody tr td {
+    border-bottom: 1px dashed #e6e6e6;
+    font-size: 16px;
+    color: #000;
+}
+.talk__board .talk__table tbody tr td a {
+    color: #000;
+}

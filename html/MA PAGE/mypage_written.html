@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 정보 페이지</title>
+    <title>마이페이지 revlew 페이지</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/common.css" />
 
-    <link rel="stylesheet" href="../assets/css/mypage_info_c.css" />
+    <link rel="stylesheet" href="../assets/css/mypage_written.css" />
 
     <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/loginPopup.css" />
@@ -189,37 +189,37 @@
 
 
     <main id="main">
-        <h2 class="blind">마이페이지 보안설정 게시판입니다.</h2>
+        <h2 class="blind">마이페이지 revlew 게시판입니다.</h2>
         <section class="MP__container">
-            <div class="MP__page__ch__container">
-                <article class="MP__page__ch__left ">
+            <div class="MP__page__w__container">
+                <article class="MP__page__w__left ">
                     <h3 class="MP__title">MY PAGE</h3>
                     <div class="MP__menu">
                         <ul>
                             <li>
-                                <a class="MP__menu__main" href="#">프로필 설정</a>
+                                <a class="MP__menu__main" href="../MA PAGE/mypage_main.html">프로필 설정</a>
                             </li>
                             <div class="MP__menu__main__area">
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 프로필 수정</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_main.html">∙ 프로필 수정</a>
                                 </li>
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 닉네임 변경</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_main.html">∙ 닉네임 변경</a>
                                 </li>
                             </div>
 
                         </ul>
                         <ul>
                             <li>
-                                <a class="MP__menu__main" href="../">보안 설정</a>
+                                <a class="MP__menu__main" href="../MA PAGE/mypage_info.html">보안 설정</a>
                             </li>
 
                             <div class="MP__menu__main__area">
                                 <li>
-                                    <a class="MP__menu__main__sub active" href="#">∙ 개인정보 수정</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_info.html">∙ 개인정보 수정</a>
                                 </li>
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 탈퇴하기</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_info.html">∙ 탈퇴하기</a>
                                 </li>
                             </div>
 
@@ -227,67 +227,232 @@
                         </ul>
                         <ul>
                             <li>
-                                <a class="MP__menu__main" href="../community/Review.html">REVIEW</a>
+                                <a class="MP__menu__main" href="../MA PAGE/mypage_written.html">REVIEW</a>
                             </li>
-                            <div class="MP__menu__main__area">
+                            <div class="MP__menu__main__area b_n">
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 리뷰 쓰기</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_written.html">∙ 리뷰 쓰기</a>
                                 </li>
                                 <li>
-                                    <a class="MP__menu__main__sub" href="#">∙ 내가 쓴 글</a>
+                                    <a class="MP__menu__main__sub" href="../MA PAGE/mypage_written.html">∙ 내가 쓴 글</a>
                                 </li>
                             </div>
 
                         </ul>
                     </div>
                 </article>
-                <article class="MP__page__ch__right ">
-                    <h3 class="MP__if__right__title">개인정보수정</h3>
+                <article class="MP__page__w__right ">
+                    <h3 class="MP__if__right__title">MY TALK</h3>
                     <div class="current__home">
                         <a class="current__home_iconBox" href="../main/main.html">
                             <span class="current__home_icon"></span>
                         </a>
                         <span>MY PAGE</span>
                     </div>
-                    <div class="MP__if__ch__box">
-                        <h4 class="MP__if__ch__title__one">기본회원정보</h4>
-                        <div class="MP__if__ch__box__box">
-                            <div class="MP__if__ch__box__ch">
-                                <label for="youNickName">닉네임</label>
-                                <input type="text" id="youNickName" class="NickName" name="youNickName"
-                                    placeholder="닉네임을 입력해 주세요." autocomplete="off" required>
-                                <a class="btn1 check" onclick="nickChecking()">중복확인</a>
-                                <p class="msg" id="youNickNameComment"></p>
-                            </div>
-                            <div class="MP__if__ch__box__ch">
-                                <label for="youPass">비밀번호</label>
-                                <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 입력해 주세요."
-                                    autocomplete="off" required>
-                                <p class="msg" id="youPassComment"></p>
-                            </div>
-                            <div class="MP__if__ch__box__ch">
-                                <label for="youPassC">비밀번호 확인</label>
-                                <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 한 번 더 입력해주세요."
-                                    autocomplete="off" required>
-                                <p class="msg" id="youPassCComment"></p>
-                            </div>
-                            <div class="MP__if__ch__box__ch">
-                                <label for="youEmail">이메일</label>
-                                <input type="email" id="youEmail" placeholder="이메일을 입력해 주세요." autocomplete="off"
-                                    required>
-                                <p class="msg" id="youEmailComment"></p>
-                            </div>
+                    <div class="board">
+                        <div class="talk__board">
+                            <table class="talk__table">
+                                <tbody>
+                                    <tr>
+                                        <td class="comment comment_1">
+                                            <div class="profile"></div>
+                                            <div class="contents">
+                                                <div class="contents__top">
+                                                    <p class="name"><span class="ir">작성자</span><span>두팔이는 심심해</span></p>
+                                                    <div class="contents__topBox">
+                                                        <p class="date"><span class="ir">작성일</span><span>|
+                                                                2022-09-18</span></p>
+                                                        <a href="#" class="remove">| 삭제</a>
+                                                        <a href="#" class="remove">| 수정</a>
+                                                    </div>
+                                                </div>
+                                                <div class="contents__bottom">
+                                                    <span>퇴근 마렵다</span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="heart">
+                                                <svg width="22" height="21" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 16.515L7.695 15.327C3.06 11.124 0 8.352 0 4.95C0 2.178 2.178 0 4.95 0C6.516 0 8.019 0.729 9 1.881C9.981 0.729 11.484 0 13.05 0C15.822 0 18 2.178 18 4.95C18 8.352 14.94 11.124 10.305 15.336L9 16.515Z" fill="#323232" />
+                                                </svg>
+                                                <p>5</p>
+                                                <span class="ir">추천수</span>
+                                            </div> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comment comment_1">
+                                            <div class="profile"></div>
+                                            <div class="contents">
+                                                <div class="contents__top">
+                                                    <p class="name"><span class="ir">작성자</span><span>두팔이는 심심해</span></p>
+                                                    <div class="contents__topBox">
+                                                        <p class="date"><span class="ir">작성일</span><span>|
+                                                                2022-09-18</span></p>
+                                                        <a href="#" class="remove">| 삭제</a>
+                                                        <a href="#" class="remove">| 수정</a>
+                                                    </div>
+                                                </div>
+                                                <div class="contents__bottom">
+                                                    <span>두팔이랑 전시회 가고 치맥 먹으실 분</span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="heart">
+                                                <svg width="22" height="21" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 16.515L7.695 15.327C3.06 11.124 0 8.352 0 4.95C0 2.178 2.178 0 4.95 0C6.516 0 8.019 0.729 9 1.881C9.981 0.729 11.484 0 13.05 0C15.822 0 18 2.178 18 4.95C18 8.352 14.94 11.124 10.305 15.336L9 16.515Z" fill="#323232" />
+                                                </svg>
+                                                <p>5</p>
+                                                <span class="ir">추천수</span>
+                                            </div> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comment comment_1">
+                                            <div class="profile"></div>
+                                            <div class="contents">
+                                                <div class="contents__top">
+                                                    <p class="name"><span class="ir">작성자</span><span>두팔이는 심심해</span></p>
+                                                    <div class="contents__topBox">
+                                                        <p class="date"><span class="ir">작성일</span><span>|
+                                                                2022-09-18</span></p>
+                                                        <a href="#" class="remove">| 삭제</a>
+                                                        <a href="#" class="remove">| 수정</a>
+                                                    </div>
+                                                </div>
+                                                <div class="contents__bottom">
+                                                    <span>도배범님 샷건 마렵네요</span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="heart">
+                                                <svg width="22" height="21" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 16.515L7.695 15.327C3.06 11.124 0 8.352 0 4.95C0 2.178 2.178 0 4.95 0C6.516 0 8.019 0.729 9 1.881C9.981 0.729 11.484 0 13.05 0C15.822 0 18 2.178 18 4.95C18 8.352 14.94 11.124 10.305 15.336L9 16.515Z" fill="#323232" />
+                                                </svg>
+                                                <p>5</p>
+                                                <span class="ir">추천수</span>
+                                            </div> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comment comment_1">
+                                            <div class="profile"></div>
+                                            <div class="contents">
+                                                <div class="contents__top">
+                                                    <p class="name"><span class="ir">작성자</span><span>두팔이는 심심해</span></p>
+                                                    <div class="contents__topBox">
+                                                        <p class="date"><span class="ir">작성일</span><span>|
+                                                                2022-09-18</span></p>
+                                                        <a href="#" class="remove">| 삭제</a>
+                                                        <a href="#" class="remove">| 수정</a>
+                                                    </div>
+                                                </div>
+                                                <div class="contents__bottom">
+                                                    <span>주말인데 일이라늬..</span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="heart">
+                                                <svg width="22" height="21" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 16.515L7.695 15.327C3.06 11.124 0 8.352 0 4.95C0 2.178 2.178 0 4.95 0C6.516 0 8.019 0.729 9 1.881C9.981 0.729 11.484 0 13.05 0C15.822 0 18 2.178 18 4.95C18 8.352 14.94 11.124 10.305 15.336L9 16.515Z" fill="#323232" />
+                                                </svg>
+                                                <p>5</p>
+                                                <span class="ir">추천수</span>
+                                            </div> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comment comment_1">
+                                            <div class="profile"></div>
+                                            <div class="contents">
+                                                <div class="contents__top">
+                                                    <p class="name"><span class="ir">작성자</span><span>두팔이는 심심해</span></p>
+                                                    <div class="contents__topBox">
+                                                        <p class="date"><span class="ir">작성일</span><span>|
+                                                                2022-09-18</span></p>
+                                                        <a href="#" class="remove">| 삭제</a>
+                                                        <a href="#" class="remove">| 수정</a>
+                                                    </div>
+                                                </div>
+                                                <div class="contents__bottom">
+                                                    <span>서울 전시회 좋드라~~ 캬핰ㅋ핰</span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="heart">
+                                                <svg width="22" height="21" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 16.515L7.695 15.327C3.06 11.124 0 8.352 0 4.95C0 2.178 2.178 0 4.95 0C6.516 0 8.019 0.729 9 1.881C9.981 0.729 11.484 0 13.05 0C15.822 0 18 2.178 18 4.95C18 8.352 14.94 11.124 10.305 15.336L9 16.515Z" fill="#323232" />
+                                                </svg>
+                                                <p>5</p>
+                                                <span class="ir">추천수</span>
+                                            </div> -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="comment comment_1">
+                                            <div class="profile"></div>
+                                            <div class="contents">
+                                                <div class="contents__top">
+                                                    <p class="name"><span class="ir">작성자</span><span>두팔이는 심심해</span></p>
+                                                    <div class="contents__topBox">
+                                                        <p class="date"><span class="ir">작성일</span><span>|
+                                                                2022-09-18</span></p>
+                                                        <a href="#" class="remove">| 삭제</a>
+                                                        <a href="#" class="remove">| 수정</a>
+                                                    </div>
+                                                </div>
+                                                <div class="contents__bottom">
+                                                    <span>두팔이랑 전시회 가고 치맥 먹으실 분</span>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="heart">
+                                                <svg width="22" height="21" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 16.515L7.695 15.327C3.06 11.124 0 8.352 0 4.95C0 2.178 2.178 0 4.95 0C6.516 0 8.019 0.729 9 1.881C9.981 0.729 11.484 0 13.05 0C15.822 0 18 2.178 18 4.95C18 8.352 14.94 11.124 10.305 15.336L9 16.515Z" fill="#323232" />
+                                                </svg>
+                                                <p>5</p>
+                                                <span class="ir">추천수</span>
+                                            </div> -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <h5 class="MP__if__ch__title__two">추가회원정보</h5>
-                    <div class="MP__if__ch__checkbox">
-                        <h6 class="MP__if__ch__title__gender">성별</h6>
-                        <p class="checkbox_p">남자</p>
-                        <input type='checkbox' id="check1" name='check_all'><label for="check1"></label>
-                        <p class="checkbox_p">여자</p>
-                        <input type='checkbox' id="check2" name='check_all'><label for="check2"></label>
+
+                    <div class="board__pages">
+                        <ul>
+                            <li><a href="#">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.2498 18L11.2498 12L17.2498 6" stroke="#323232" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M11.25 18L5.25 12L11.25 6" stroke="#323232" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></a></li>
+                            <li><a href="#">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.25 6L8.25 12L14.25 18" stroke="#323232" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a></li>
+                            <li><a class="active" href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="#323232" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></a></li>
+                            <li><a href="#">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.75024 6L12.7502 12L6.75024 18" stroke="#323232" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12.75 6L18.75 12L12.75 18" stroke="#323232" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></a></li>
+                        </ul>
                     </div>
-                    <h5 class="MP__if__ch__title__two">마켓팅 수신 동의</h5>
+
                 </article>
 
             </div>

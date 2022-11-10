@@ -1,205 +1,244 @@
 .MP__container {
-  max-width: 1200px;
-  padding: 0 20px;
-  margin: 180px auto 120px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 180px auto 120px auto;
 }
 
 .MP__page__ch__container {
-  max-width: 1200px;
-  padding: 0 20px 1403px 20px;
-  margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px 1206px 20px;
+    margin: 0 auto;
 }
 
 /* MP__left */
 .MP__page__ch__left {
-  width: 20%;
-  float: left;
+    width: 10rem;
+    float: left;
 }
 
 .MP__title {
-  font-size: 30px;
-  font-weight: 600;
-  padding-bottom: 13px;
-  border-bottom: 2px solid #000;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 13px;
+    border-bottom: 2px solid #000;
 }
 
 .MP__menu {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .MP__menu__main {
-  display: block;
-  padding: 30px 0;
-  border-bottom: 1px solid #d9d9d9;
-  font-size: 18px;
-  font-weight: 300;
+    display: block;
+    padding: 30px 0;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .MP__menu__main__area {
-  /* margin-bottom: 71px; */
+    border-bottom: 2px solid #000;
+}
+
+.MP__menu__main__area.b_n {
+    border-bottom: none;
 }
 
 .MP__menu__main__sub {
-  display: block;
-  padding: 26px 0;
-  color: #999;
-  font-weight: 300;
-}
-
-.MP__menu__main__sub.active {
-  color: #000;
+    display: block;
+    padding: 26px 0;
+    color: #999;
+    font-weight: 300;
 }
 
 /* MP__right */
 .MP__page__ch__right {
-  width: 67%;
-  float: right;
+    width: calc(100% - 13.625rem);
+    float: right;
 }
 
 .current__home {
-  position: relative;
-  bottom: 30px;
-  display: flex;
-  right: 0px;
-  align-items: center;
-  justify-content: flex-end;
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    right: 0px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .MP__if__right__title {
-  font-size: 30px;
-  font-weight: 500;
-  padding-bottom: 13px;
-  border-bottom: 2px solid #000;
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 13px;
+    border-bottom: 2px solid #000;
 }
 
 .MP__if__ch__box {
-  padding-bottom: 100x;
-  border-bottom: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding-bottom: 22px;
 }
 
 .MP__if__ch__title__one {
-  font-size: 20px;
-  border-bottom: 1px solid #d9d9d9;
-  display: block;
-  padding: 5px 0 30px 0;
+    font-size: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    display: block;
+    padding: 5px 0 30px 0;
 }
 
 .MP__if__ch__box__box {
-  margin-top: 33px;
-  font-size: 18px;
+    margin-top: 33px;
+    font-size: 18px;
 }
 
 .MP__if__ch__box__ch {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .MP__if__ch__box__box label {
-  width: 25%;
-  float: left;
-  height: 60px;
-  align-items: center;
-  display: flex;
+    width: 10.875rem;
+    float: left;
+    height: 60px;
+    align-items: center;
+    display: flex;
 }
 
 .MP__if__ch__box__box input {
-  box-sizing: border-box;
-  width: 50%;
-  padding: 20px;
-  border: 1px solid #d9d9d9;
-  font-weight: 300;
-  border-radius: 10px;
-  margin-right: 10px;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #d9d9d9;
+    font-weight: 300;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .MP__if__ch__box__ch .btn1 {
-  width: 12%;
-  line-height: 57px;
-  display: inline-block;
-  background-color: black;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-  font-weight: 300;
-  cursor: pointer;
-  font-size: 16px;
+    width: 12%;
+    line-height: 57px;
+    display: inline-block;
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .MP__if__ch__title__two {
-  font-size: 28px;
-  display: block;
-  padding: 20px 0 20px 0;
-  border-bottom: 1px solid #d9d9d9;
+    font-size: 28px;
+    display: block;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #d9d9d9;
 }
-
-.MP__if__ch__title__gender {
-  width: 25%;
-  float: left;
-  font-size: 18px;
-  font-weight: 400;
+.MP__if__ch__job__box {
+    padding: 30px 0;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+}
+.jobbox {
+    width: 10.875rem;
+    float: left;
+    height: 60px;
+    align-items: center;
+    display: flex;
+}
+#job {
+    height: 3.75rem;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    color: #111;
+    line-height: 1;
+    border-bottom: 1px solid #d0d0d0;
 }
 
 .checkbox_p {
-  margin-right: 41px;
+    margin-right: 41px;
 }
 
 .MP__if__ch__checkbox {
-  padding: 30px 0 30px 0;
-  border-bottom: 2px solid #000;
-  display: flex;
+    padding: 30px 0 30px 0;
+    border-bottom: 2px solid #000;
+    display: flex;
 }
 
 input[type="checkbox"] {
-  display: none;
+    display: none;
 }
 
 input[type="checkbox"] + label {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border: 1px solid #000;
-  position: relative;
-  cursor: pointer;
-  margin-right: 38px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    position: relative;
+    cursor: pointer;
+    margin-right: 38px;
 }
 
 input[id="check1"]:checked + label::after {
-  content: "✔";
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  top: -5px;
-  color: #000;
+    content: "✔";
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    color: #000;
 }
 
 input[id="check2"]:checked + label::after {
-  content: "✔";
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  top: -5px;
-  color: #000;
+    content: "✔";
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    color: #000;
 }
 
 .MP__page__ch__btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 18.125rem;
-  margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 18.125rem;
+    margin-top: 1rem;
+    margin-bottom: 105px;
 }
 
 .MP__page__ch__btn a {
-  display: inline-block;
-  text-decoration: underline;
-  color: #222;
-  line-height: 1.2rem;
-  letter-spacing: -0.025rem;
+    display: inline-block;
+    text-decoration: underline;
+    color: #222;
+    line-height: 1.2rem;
+    letter-spacing: -0.025rem;
+}
+
+.MP__page__if__area {
+    display: flex;
+    justify-content: center;
+}
+
+.MP__page__c__button__area {
+    margin-left: 30px;
+}
+.MP__page__c__button__area .secondary {
+    background-color: #fff;
+    border: 1px solid #111;
+    width: 273px;
+    height: 78px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.MP__page__c__button__area .primary {
+    background: #111;
+    color: #fff;
+    width: 273px;
+    height: 78px;
+    font-size: 20px;
+    cursor: pointer;
 }
