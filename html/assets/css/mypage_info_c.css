@@ -82,7 +82,7 @@
   font-size: 20px;
   border-bottom: 1px solid #d9d9d9;
   display: block;
-  padding-bottom: 20px;
+  padding: 5px 0 30px 0;
 }
 
 .MP__if__ch__box__box {
@@ -104,7 +104,7 @@
 
 .MP__if__ch__box__box input {
   box-sizing: border-box;
-  width: 370px;
+  width: 50%;
   padding: 20px;
   border: 1px solid #d9d9d9;
   font-weight: 300;
@@ -127,9 +127,9 @@
 
 .MP__if__ch__title__two {
   font-size: 28px;
-  border-bottom: 1px solid #d9d9d9;
   display: block;
   padding: 20px 0 20px 0;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .MP__if__ch__title__gender {
@@ -145,7 +145,7 @@
 
 .MP__if__ch__checkbox {
   padding: 30px 0 30px 0;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 2px solid #000;
   display: flex;
 }
 
@@ -186,4 +186,20 @@ input[id="check2"]:checked + label::after {
   left: 0;
   top: -5px;
   color: #000;
+}
+
+.MP__page__ch__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 18.125rem;
+  margin-top: 1rem;
+}
+
+.MP__page__ch__btn a {
+  display: inline-block;
+  text-decoration: underline;
+  color: #222;
+  line-height: 1.2rem;
+  letter-spacing: -0.025rem;
 }
